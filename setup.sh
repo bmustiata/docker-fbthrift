@@ -122,6 +122,9 @@ autoreconf -ivf
 make
 make install
 
+# cleanup
+cd /
+rm -fr /folly
 
 
 #############################################################################
@@ -230,4 +233,4 @@ apt-get install -y libkrb5-dev
 #############################################################################
 apt-get autoremove -y
 apt-get clean
-rm /var/lib/apt/lists/*
+rm -rf /var/lib/apt/lists/*
