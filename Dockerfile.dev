@@ -5,9 +5,6 @@ ENV FBTHRIFT_VERSION master
 ADD setup/00_install_packages.sh /setup/00_install_packages.sh
 RUN /setup/00_install_packages.sh
 
-ADD setup/01_install_packages.sh /setup/01_install_packages.sh
-RUN /setup/01_install_packages.sh
-
 ADD setup/02_build_deps_glog.sh /setup/02_build_deps_glog.sh
 RUN /setup/02_build_deps_glog.sh
 
@@ -31,3 +28,9 @@ RUN /setup/08_build_fb_deps_zstd.sh
 
 ADD setup/10_build_fbthrift.sh /setup/10_build_fbthrift.sh
 RUN /setup/10_build_fbthrift.sh
+
+ADD setup/20_cleanup_packages.sh /setup/20_cleanup_packages.sh
+RUN /setup/20_cleanup_packages.sh
+
+ENTRYPOINT ["/usr/bin/thrift1"]
+

@@ -18,6 +18,7 @@ buildDeps=" \
 		make \
 		cmake \
 		pkg-config \
+        git
 	"
 
 apt-get update

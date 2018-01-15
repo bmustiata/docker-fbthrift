@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#############################################################################
+# Build folly
+#############################################################################
 apt-get install -y \
 	g++ \
     automake \
@@ -31,4 +34,7 @@ autoreconf -ivf
 make
 make install
 
+# cleanup
+cd /
+rm -fr /folly
 
